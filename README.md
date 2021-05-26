@@ -26,5 +26,5 @@ git clone git@github.com:kano1101/heroku-wakeup.git
 cd heroku-wakeup
 echo "LINE_NOTIFY_TOKEN='your-registered-token'" > .env
 rails console
-> HerokuBrowser.start'example-app')
+> HerokuBrowser.start('example-app')
 ```
