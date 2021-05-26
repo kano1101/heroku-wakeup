@@ -1,24 +1,30 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Environments
 
-Things you may want to cover:
+1. macOS
 
-* Ruby version
+## Requires
 
-* System dependencies
+1. Xvfb install.
+https://support.apple.com/ja-jp/HT201341
 
-* Configuration
+2. Settings such as this.
+```
+mkdir /tmp/.X11-unix
+sudo chmod 1777 /tmp/.X11-unix
+sudo chown root /tmp/.X11-unix/
+```
 
-* Database creation
+3. Register for LineNotify.
+https://notify-bot.line.me/my/
 
-* Database initialization
+## Usage
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+git clone git@github.com:kano1101/heroku-wakeup.git
+cd heroku-wakeup
+echo "LINE_NOTIFY_TOKEN='your-registered-token'" > .env
+rails console
+> HerokuBrowser.start'example-app')
+```
